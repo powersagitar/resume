@@ -3,7 +3,7 @@ name: Build LaTeX document
 on:
   push:
     branches:
-      - $default-branch
+      - main
   workflow_dispatch:
 
 jobs:

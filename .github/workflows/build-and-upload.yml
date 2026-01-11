@@ -20,17 +20,17 @@ jobs:
         with:
           root_file: main.tex
           post_compile: |
-            mv 'main.pdf' 'Mohan Dong Resume.pdf'
+            mv 'main.pdf' 'Resume_Mohan_Dong.pdf'
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
           name: Resume
-          path: Mohan Dong Resume.pdf
+          path: Resume_Mohan_Dong.pdf
 
       - name: Publish release
         run: |
           gh release delete latest --cleanup-tag --yes
-          gh release create latest "Mohan Dong Resume.pdf" --title "Resume" --notes "Built on $(date)"
+          gh release create latest "Resume_Mohan_Dong.pdf" --title "Resume" --notes "Built on $(date)"
         env:
           GH_TOKEN: ${{ github.token }}

@@ -30,6 +30,6 @@ jobs:
 
       - name: Publish release
         run: |
-          gh release create $GITHUB_REF_NAME "Resume_Mohan_Dong.pdf" --title "Resume" --notes "Built on $(date)"
+          gh release create $GITHUB_REF_NAME "Resume_Mohan_Dong_$GITHUB_REF_NAME.pdf" --title "Resume" --notes "Built on $(date)"
         env:
           GH_TOKEN: ${{ github.token }}

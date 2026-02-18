@@ -126,7 +126,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Waterloo}{Waterloo, ON}
-      {Bachelor of Software Engineering}{Sep. 2025 -- Apr. 2030}
+      {Bachelor of Software Engineering}{2025 -- 2030}
     \resumeItemListStart
       \resumeItem{GPA: 3.99 (Term Distinction)}
       \resumeItem{Academic Representative for Software Engineering cohort of 2030}
@@ -161,22 +161,22 @@
       {Founding Technical Lead}{2025}
       {Shadows of Racism}{}
       \resumeItemListStart
-        \resumeItem{Led development of a commissioned web companion for an art exhibit, architecting a full-stack application with Next.js, PostgreSQL, and Vercel Blob}
-        \resumeItem{Implemented secure authentication and access control using NextAuth.js, designing the database schema and query layer to support role-based data access}
-        \resumeItem{Recruited and managed a 10-member student team, enforcing code quality via pre-commit hooks and a PR review process, and delivered the project on a one-month timeline tracked through GitHub Issues and a Gantt chart}
+        \resumeItem{Architected and built a commissioned full-stack web companion for a public art exhibit using Next.js, PostgreSQL, and Vercel Blob}
+        \resumeItem{Designed and implemented secure authentication and role-based access control with NextAuth.js, defining the database schema and query layer for structured data access}
+        \resumeItem{Recruited and led a 10-member engineering team, enforcing code quality via pre-commit hooks and a PR review process, and delivered core features on a 4-week timeline tracked through GitHub Issues and a Gantt chart}
       \resumeItemListEnd
 
     \resumeSubheading
       {Open Source Contributor}{2024}
       {OBS Studio}{}
       \resumeItemListStart
-        \resumeItem{Fixed a button text truncation bug in C++ and Qt by setting \texttt{QSizePolicy::Minimum} to constrain the Controls panel width, refining an initial subclass approach into a minimal, RTL-compatible fix through maintainer review}
+        \resumeItem{Resolved a C++/Qt UI truncation bug by refining a subclass approach into a minimal \texttt{QSizePolicy::Minimum} fix based on maintainer feedback, delivering an RTL-compatible patch accepted upstream}
       \resumeItemListEnd
 
     \resumeSubSubheading
     {React Notion X}{}
       \resumeItemListStart
-        \resumeItem{Traced a regressed syntax highlighting bug across two libraries to a Notion API / prism.js language identifier mismatch, patching the upstream react-notion-x renderer to normalize C++ and F\# identifiers at the source}
+        \resumeItem{Traced a regressed syntax highlighting bug across two libraries to a Notion API and prism.js language identifier mismatch and patched the upstream react-notion-x renderer to normalize C++ and F\# identifiers at the source}
       \resumeItemListEnd
 
     \resumeSubSubheading
@@ -196,7 +196,7 @@
     \resumeProjectHeading
       {\textbf{Mastermind (Modular Architecture)} $|$ \emph{Java, Swing, JUnit Jupiter, GitHub Actions}}{2024 -- 2025}
       \resumeItemListStart
-        \resumeItem{Implemented Model-View separation through a shared interface using OOP principles and an MVC-inspired architecture, allowing any compliant GUI to be swapped in without modifying core logic}
+        \resumeItem{Implemented Model-View separation through a shared interface using OOP principles and an MVC-inspired architecture, isolating presentation from game logic to enable interchangeable GUI implementations}
         \resumeItem{Designed multiple solver implementations using Dependency Injection and Template Method patterns for pluggable algorithms, including a Donald Knuth optimal solver}
         \resumeItem{Validated game logic with JUnit Jupiter unit tests, leveraging the decoupled architecture to test behavior independently of the presentation layer}
         \resumeItem{Authored comprehensive Javadoc documentation and a project wiki, auto-generated to HTML and deployed to GitHub Pages via a GitHub Actions CI/CD pipeline}
@@ -205,8 +205,9 @@
     \resumeProjectHeading
       {\textbf{Personal Portfolio (\href{https://www.powerium.io}{powerium.io})} $|$ \emph{Next.js, Notion API, Vercel}}{2023 -- Present}
       \resumeItemListStart
-        \resumeItem{Built a custom Notion block renderer to translate Notion API responses into DOM elements with Next.js}
-        \resumeItem{Optimized page performance using Next.js caching strategies to achieve a perfect Real Experience Score on Vercel Speed Insights across desktop and mobile}
+        \resumeItem{Built a custom Notion block renderer in Next.js to parse and transform Notion API responses into structured, reusable React components}
+        \resumeItem{Improved page performance using Next.js caching and revalidation strategies, resulting in
+        elimination of redundant API calls and a perfect Real Experience Score across desktop and mobile}
         \resumeItem{Authored a technical blog covering topics such as C++ performance and design patterns}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -219,8 +220,8 @@
     \small{\item{
       \textbf{Languages}{: C/C++, TypeScript/JavaScript, Java, SQL (Postgres), Rust, Go, HTML/CSS, Python, Shell
       Scripting} \\
-      \textbf{Frontend}{: Next.js, React, Tailwind CSS, shadcn/ui, Google Maps Platform} \\
       \textbf{Backend \& Testing}{: Node.js, JUnit Jupiter, GoogleTest, NextAuth.js} \\
+      \textbf{Frontend}{: Next.js, React, Tailwind CSS, shadcn/ui, Google Maps Platform} \\
       \textbf{Developer Tools}{: Git, Linux, CMake, Make, Gradle, Docker} \\
     }}
  \end{itemize}

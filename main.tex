@@ -163,15 +163,20 @@
       \resumeItemListStart
         \resumeItem{Led development of a commissioned web companion for an art exhibit, architecting a full-stack application with Next.js, PostgreSQL, and Vercel Blob}
         \resumeItem{Implemented secure authentication and access control using NextAuth.js, designing the database schema and query layer to support role-based data access}
-        \resumeItem{Recruited and managed a 10-member student team, establishing a pull request review process with pre-commit hooks to enforce code quality and consistent coding style across the codebase}
-        \resumeItem{Delivered the project within a one-month timeline using GitHub Issues and a Gantt chart for task tracking and coordination}
+        \resumeItem{Recruited and managed a 10-member student team, enforcing code quality via pre-commit hooks and a PR review process, and delivered the project on a one-month timeline tracked through GitHub Issues and a Gantt chart}
       \resumeItemListEnd
 
     \resumeSubheading
       {Open Source Contributor}{2024}
       {OBS Studio}{}
       \resumeItemListStart
-        \resumeItem{Fixed a button text truncation bug in C++ and Qt by setting \texttt{QSizePolicy::Minimum} to constrain the Controls panel minimum width, refining the solution through maintainer review from an initial subclass approach to a minimal, RTL-compatible fix}
+        \resumeItem{Fixed a button text truncation bug in C++ and Qt by setting \texttt{QSizePolicy::Minimum} to constrain the Controls panel width, refining an initial subclass approach into a minimal, RTL-compatible fix through maintainer review}
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+    {React Notion X}{}
+      \resumeItemListStart
+        \resumeItem{Traced a regressed syntax highlighting bug across two libraries to a Notion API / prism.js language identifier mismatch, patching the upstream react-notion-x renderer to normalize C++ and F\# identifiers at the source}
       \resumeItemListEnd
 
     \resumeSubSubheading
@@ -180,12 +185,6 @@
         \resumeItem{Extended C++ language detection to recognize four C++20 module interface unit file
         extensions (\texttt{.cppm}, \texttt{.ccm}, \texttt{.cxxm}, \texttt{.c++m}) by contributing to the core language
         configuration}
-      \resumeItemListEnd
-
-    \resumeSubSubheading
-    {React Notion X}{}
-      \resumeItemListStart
-        \resumeItem{Fixed a syntax highlighting bug in a React Notion rendering library caused by a language identifier mismatch between the Notion API and prism.js}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -197,12 +196,10 @@
     \resumeProjectHeading
       {\textbf{Mastermind (Modular Architecture)} $|$ \emph{Java, Swing, JUnit Jupiter, GitHub Actions}}{2024 -- 2025}
       \resumeItemListStart
-        \resumeItem{Built a Mastermind game implementation in Java with a Swing frontend and Donald Knuth optimal solver}
         \resumeItem{Implemented Model-View separation through a shared interface using OOP principles and an MVC-inspired architecture, allowing any compliant GUI to be swapped in without modifying core logic}
-        \resumeItem{Designed solver using Dependency Injection and Template Method patterns for pluggable algorithms}
+        \resumeItem{Designed multiple solver implementations using Dependency Injection and Template Method patterns for pluggable algorithms, including a Donald Knuth optimal solver}
         \resumeItem{Validated game logic with JUnit Jupiter unit tests, leveraging the decoupled architecture to test behavior independently of the presentation layer}
         \resumeItem{Authored comprehensive Javadoc documentation and a project wiki, auto-generated to HTML and deployed to GitHub Pages via a GitHub Actions CI/CD pipeline}
-        \resumeItem{Managed delivery using Git and GitHub Issues; published a development reflection on the portfolio}
       \resumeItemListEnd
 
     \resumeProjectHeading

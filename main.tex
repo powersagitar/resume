@@ -161,9 +161,10 @@
       {Founding Technical Lead}{2025}
       {Public Art Exhibit Web Companion}{}
       \resumeItemListStart
-        \resumeItem{Architected and built a commissioned full-stack web companion for a public art exhibit using Next.js, PostgreSQL, and Vercel Blob}
-        \resumeItem{Designed and implemented secure authentication and role-based access control with NextAuth.js, defining the database schema and query layer for structured data access}
-        \resumeItem{Recruited and led a 10-member engineering team, enforcing code quality via pre-commit hooks and a PR review process, and delivered core features on a 4-week timeline tracked through GitHub Issues and a Gantt chart}
+        \resumeItem{Architected a commissioned full-stack web companion for a public art exhibit using Next.js, PostgreSQL, and Vercel Blob}
+        \resumeItem{Recruited and led a 10-member engineering team, enforcing code quality via pre-commit hooks and PR reviews while delivering core features on a 4-week timeline tracked through GitHub Issues and a Gantt chart}
+        \resumeItem{Built user authentication and access control with NextAuth.js, and designed the PostgreSQL schema and query layer for structured data access}
+        \resumeItem{Implemented a paginated artwork gallery using \texttt{ORDER BY}/\texttt{LIMIT}/\texttt{OFFSET} queries, evaluating cursor-based pagination tradeoffs and selecting offset pagination for a dataset of $\sim$400 artworks}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -198,7 +199,7 @@
       \resumeItemListStart
         \resumeItem{Implemented Model-View separation through a shared interface using OOP principles and an MVC-inspired architecture, isolating presentation from game logic to enable interchangeable GUI implementations}
         \resumeItem{Designed multiple solver implementations using Dependency Injection and Template Method patterns for pluggable algorithms, including a Donald Knuth optimal solver}
-        \resumeItem{Validated game logic with JUnit Jupiter unit tests, leveraging the decoupled architecture to test behavior independently of the presentation layer}
+        \resumeItem{Validated game logic with JUnit Jupiter unit tests, enabling behavior testing independent of the presentation layer}
         \resumeItem{Authored comprehensive Javadoc documentation and a project wiki, auto-generated to HTML and deployed to GitHub Pages via a GitHub Actions CI/CD pipeline}
       \resumeItemListEnd
 
@@ -206,8 +207,7 @@
       {\textbf{Personal Portfolio (\href{https://www.powerium.io}{powerium.io})} $|$ \emph{Next.js, Notion API, Vercel}}{2023 -- Present}
       \resumeItemListStart
         \resumeItem{Built a custom Notion block renderer in Next.js to parse and transform Notion API responses into structured, reusable React components}
-        \resumeItem{Improved page performance using Next.js caching and revalidation strategies, resulting in
-        elimination of redundant API calls and a perfect Real Experience Score across desktop and mobile}
+        \resumeItem{Improved page performance using Next.js caching and revalidation strategies, resulting in elimination of redundant API calls and a perfect Real Experience Score across desktop and mobile}
         \resumeItem{Authored a technical blog covering topics such as C++ performance and design patterns}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -220,7 +220,7 @@
     \small{\item{
       \textbf{Languages}{: C/C++, TypeScript/JavaScript, Java, SQL (Postgres), Rust, Go, HTML/CSS, Python, Shell
       Scripting} \\
-      \textbf{Backend \& Testing}{: Node.js, JUnit Jupiter, GoogleTest, NextAuth.js} \\
+      \textbf{Backend \& Testing}{: REST APIs, Node.js, JUnit Jupiter, GoogleTest, NextAuth.js} \\
       \textbf{Frontend}{: Next.js, React, Tailwind CSS, shadcn/ui, Google Maps Platform} \\
       \textbf{Developer Tools}{: Git, Linux, CMake, Make, Gradle, Docker} \\
     }}

@@ -29,6 +29,11 @@ jobs:
 
       - name: Publish release
         run: |
-          gh release create $GITHUB_REF_NAME "Resume_Mohan_Dong_$GITHUB_REF_NAME.pdf" --title "Resume $GITHUB_REF_NAME" --notes "Built on $(date)"
+          if [ "${{ github.event.base_ref }}" = "refs/heads/main" ]; then
+            cp "Resume_Mohan_Dong_$GITHUB_REF_NAME.pdf" "Mohan_Dong_Resume.pdf"
+            gh release create $GITHUB_REF_NAME "Mohan_Dong_Resume.pdf" --title "Resume $GITHUB_REF_NAME" --notes "Built on $(date)" --latest
+          else
+            gh release create $GITHUB_REF_NAME "Resume_Mohan_Dong_$GITHUB_REF_NAME.pdf" --title "Resume $GITHUB_REF_NAME" --notes "Built on $(date)" --latest=false
+          fi
         env:
           GH_TOKEN: ${{ github.token }}

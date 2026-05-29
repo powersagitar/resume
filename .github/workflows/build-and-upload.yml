@@ -33,7 +33,7 @@ jobs:
             cp "Resume_Mohan_Dong_$GITHUB_REF_NAME.pdf" "Mohan_Dong_Resume.pdf"
             gh release create $GITHUB_REF_NAME "Mohan_Dong_Resume.pdf" --title "Resume $GITHUB_REF_NAME" --notes "Built on $(date)" --latest
           else
-            gh release create $GITHUB_REF_NAME "Resume_Mohan_Dong_$GITHUB_REF_NAME.pdf" --title "Resume $GITHUB_REF_NAME" --notes "Built on $(date)" --latest=false
+            gh release create $GITHUB_REF_NAME "Mohan_Dong_Resume_$GITHUB_REF_NAME.pdf" --title "Resume $GITHUB_REF_NAME" --notes "Built on $(date)" --latest=false
           fi
         env:
           GH_TOKEN: ${{ github.token }}

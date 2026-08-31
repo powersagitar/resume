@@ -188,11 +188,11 @@
 
     \resumeSubheading
       {Open Source Contributor}{2024}
-      {VS Code, OBS Studio, React Notion X}{GitHub}
+      {OBS Studio, VS Code, React Notion X}{GitHub}
       \resumeItemListStart
-        \resumeItem{Extended C++20 modules support in \textbf{VS Code}, a 190k-star project, improving IntelliSense accuracy for developers adopting the new module syntax}
-        \resumeItem{Diagnosed and fixed a UI bug in \textbf{OBS Studio}, a 76k-star project, delivering an accessibility-conscious patch based on maintainer feedback}
-        \resumeItem{Traced a syntax highlighting regression in \textbf{React Notion X} to its root cause in the upstream renderer, fixing it at the source for all downstream consumers}
+        \resumeItem{\href{https://github.com/obsproject/obs-studio/pull/10318}{[\underline{OBS Studio \#10318}]} Shipped a UI fix rendering correctly for both \textbf{LTR and RTL} language users in the 30.2 release, resolving a user-reported text-clipping bug through maintainer-reviewed iteration}
+        \resumeItem{\href{https://github.com/microsoft/vscode/pull/214800}{[\underline{VS Code \#214800}]} Unblocked \textbf{syntax highlighting and IntelliSense} for developers writing C++20 modules by registering new module file extensions}
+        \resumeItem{\href{https://github.com/NotionX/react-notion-x/pull/546}{[\underline{React Notion X \#546}]} Fixed broken code rendering across \textbf{all downstream sites} by restoring a syntax highlighting patch that had regressed out of \texttt{master}, shepherding a 7-month review to merge}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd

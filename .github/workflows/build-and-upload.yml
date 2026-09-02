@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      PDF_NAME: Mohan_Dong_Resume.pdf
+      PDF_NAME_WITH_REF: Mohan_Dong_Resume_${{ github.ref_name }}.pdf
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
@@ -19,21 +22,40 @@ jobs:
         with:
           root_file: main.tex
           post_compile: |
-            mv 'main.pdf' 'Resume_Mohan_Dong_${{ github.ref_name }}.pdf'
+            mv 'main.pdf' '${{ env.PDF_NAME_WITH_REF }}'
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
           name: Resume
-          path: Resume_Mohan_Dong_${{ github.ref_name }}.pdf
+          path: ${{ env.PDF_NAME_WITH_REF }}
+
+      - name: Check for broken links
+        id: link_check
+        run: |
+          pipx install pdfx --quiet
+          pdfx -c "$PDF_NAME_WITH_REF" > pdfx_output.txt 2>&1 || true
+          cat pdfx_output.txt
+          if grep -q "broken (reason" pdfx_output.txt; then
+            echo "has_broken_links=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_broken_links=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Publish release
         run: |
+          NOTES="Built on $(date)"
+          if [ "${{ steps.link_check.outputs.has_broken_links }}" = "true" ]; then
+            NOTES="> [!WARNING]
+          > The compiled PDF contains broken links. Check the CI logs for details.
+
+          $NOTES"
+          fi
           if [ "${{ github.event.base_ref }}" = "refs/heads/main" ]; then
-            cp "Resume_Mohan_Dong_$GITHUB_REF_NAME.pdf" "Mohan_Dong_Resume.pdf"
-            gh release create $GITHUB_REF_NAME "Mohan_Dong_Resume.pdf" --title "Resume $GITHUB_REF_NAME" --notes "Built on $(date)" --latest
+            cp "$PDF_NAME_WITH_REF" "$PDF_NAME"
+            gh release create $GITHUB_REF_NAME "$PDF_NAME" --title "Resume $GITHUB_REF_NAME" --notes "$NOTES" --latest
           else
-            gh release create $GITHUB_REF_NAME "Mohan_Dong_Resume_$GITHUB_REF_NAME.pdf" --title "Resume $GITHUB_REF_NAME" --notes "Built on $(date)" --latest=false
+            gh release create $GITHUB_REF_NAME "$PDF_NAME_WITH_REF" --title "Resume $GITHUB_REF_NAME" --notes "$NOTES" --latest=false
           fi
         env:
           GH_TOKEN: ${{ github.token }}

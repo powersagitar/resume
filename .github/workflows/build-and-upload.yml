@@ -33,13 +33,11 @@ jobs:
       - name: Check for broken links
         id: link_check
         run: |
-          pipx install pdfx --quiet
-          pdfx -c "$PDF_NAME_WITH_REF" > pdfx_output.txt 2>&1 || true
-          cat pdfx_output.txt
-          if grep -q "broken (reason" pdfx_output.txt; then
-            echo "has_broken_links=true" >> "$GITHUB_OUTPUT"
-          else
+          pip install --quiet pymupdf
+          if python3 .github/scripts/check_links.py "$PDF_NAME_WITH_REF"; then
             echo "has_broken_links=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_broken_links=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Publish release

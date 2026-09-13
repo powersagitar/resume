@@ -125,7 +125,10 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Waterloo}{Expected May 2030}
-      {Bachelor of Software Engineering $|$ Academic Representative (1A)}{GPA: \textbf{3.95} (Term Distinction)}
+      {Bachelor of Software Engineering}{GPA: \textbf{3.95} (Term Distinction)}
+      \resumeItemListStart
+        \resumeItem{Elected Academic Representative for Software Engineering cohort of 2030 (1A)}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -168,9 +171,10 @@
       {Software Developer Intern}{May 2026 -- August 2026}
       {The Co-operators}{Toronto, ON}
       \resumeItemListStart
-        \resumeItem{Unlocked a new integration channel for third-party automotive OEM and credit union partners by building and owning a \textbf{developer portal} from the ground up}
-        \resumeItem{Armed the frontend team with automated visibility into performance regressions via a serverless \textbf{Lighthouse pipeline} on AWS Lambda and Docker, catching issues before they reached users}
-        \resumeItem{Hardened support reliability by rebuilding Glia's \textbf{customer support widget} into a fully custom experience from Figma designs, adding timeout handling and typing indicators}
+        \resumeItem{Unlocked an integration channel for automotive OEM and credit union partners by building a \textbf{developer portal}}
+        \resumeItem{Built a serverless \textbf{Lighthouse pipeline} (AWS Lambda, Docker) for automated performance-regression visibility}
+        \resumeItem{Hardened support reliability by rebuilding Glia's \textbf{support widget} with timeout handling and typing indicators}
+        \resumeItem{Proposed a \textbf{spec-driven workflow} to unblock backend and docs teams to build against APIs in parallel}
         \resumeItem{Cut software licensing costs by \textbf{31\%} by automating inactive-account detection in the team's CI pipeline}
         \resumeItem{Recognized with an \textbf{Outstanding} work-term performance rating through UWaterloo's official co-op evaluation}
       \resumeItemListEnd
@@ -179,9 +183,12 @@
       {Technical Lead}{2025}
       {Shadows of Racism, Voices Unheard}{Markham, ON}
       \resumeItemListStart
-        \resumeItem{Shipped a full-stack web companion for the 14-school public art exhibit on a fixed \textbf{4-week deadline} by recruiting and leading a \textbf{10-member engineering team}}
-        \resumeItem{Architected the storage schema and pagination strategy for a catalog of \textbf{$\sim$400 artworks}, keeping it easy to query and extend as the exhibit grew}
-        \resumeItem{Secured artwork uploads behind domain-verified YRDSB accounts, gating account creation with \textbf{Google OAuth} and route-protecting middleware}
+        \resumeItem{Shipped a full-stack web companion for a 14-school exhibit in \textbf{4 weeks} by leading a \textbf{10-member team}}
+        \resumeItem{Defined shared \textbf{TypeScript interfaces} up front, letting team members build frontend and backend independently}
+        \resumeItem{Architected the storage schema and pagination strategy for a catalog of \textbf{$\sim$400 artworks} for speed and simplicity}
+        \resumeItem{Gated account creation to verified \textbf{YRDSB} teacher emails via regex-checked Google OAuth sign-in}
+        \resumeItem{Enabled direct-to-storage artwork uploads by implementing token-based client uploads with \textbf{Vercel Blob}}
+        \resumeItem{Validated artwork metadata server-side with \textbf{Zod} schemas, rejecting malformed submissions before insertion}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -202,17 +209,21 @@
     \resumeProjectHeading
       {\textbf{Static Site Framework \& CMS (\href{https://mssg.mohandong.com}{mssg.mohandong.com})} $|$ \emph{Next.js, MDX, Vercel}}{2023 -- Present}
       \resumeItemListStart
-        \resumeItem{Slashed Largest Contentful Paint from 1.7s to \textbf{0.5s} and eliminated exposure to API downtime by designing and building a general-purpose \textbf{static site framework} to replace Notion as the site's CMS}
-        \resumeItem{Built a file-based routing system in Next.js, resolving MDX through nested directories and index pages via a \textbf{custom remark plugin}, for arbitrarily nested content organization}
-        \resumeItem{Guaranteed zero-downtime hosting for \textbf{2 years} by layering Cloudflare's Always Online caching in front of Vercel, serving archived pages through origin outages}
+        \resumeItem{Slashed Largest Contentful Paint from 1.7s to \textbf{0.5s} by building a general-purpose \textbf{static site framework}}
+        \resumeItem{Eliminated exposure to API downtime by swapping out Notion as the site's CMS, improving overall site reliability}
+        \resumeItem{Extended MDX with a \textbf{custom remark plugin}, compiling directive syntax into reusable JSX components}
+        \resumeItem{Designed a file-based routing system in Next.js, \textbf{resolving nested content directories} to arbitrary URL paths}
+        \resumeItem{Devised a \textbf{navigation DSL}, auto-populating entries from directories via a hand-rolled parser}
+        \resumeItem{Guaranteed zero-downtime hosting for \textbf{2 years} by layering Cloudflare's Always Online caching in front of Vercel}
       \resumeItemListEnd
 
     \resumeProjectHeading
       {\textbf{Mastermind (Modular Architecture)} $|$ \emph{Java, Swing, JUnit Jupiter, GitHub Actions}}{2024 -- 2025}
       \resumeItemListStart
-        \resumeItem{Engineered interchangeable solver algorithms, including a \textbf{Donald Knuth optimal solver} implemented from his paper, via Dependency Injection and Template Method to simplify swapping strategies}
-        \resumeItem{Enabled isolated unit testing of solver algorithms by decoupling game logic from GUI implementations, separating Model from View via a shared interface in an \textbf{MVC-inspired architecture}}
-        \resumeItem{Automated Javadoc and project wiki deployment on every commit via a purpose-built \textbf{4-job GitHub Actions pipeline} that ran jobs in parallel, keeping documentation permanently in sync with source}
+        \resumeItem{Engineered interchangeable solver algorithms via DI, including a \textbf{Knuth optimal solver} based on his paper}
+        \resumeItem{Enabled isolated unit testing by decoupling game logic from GUI in an \textbf{MVC-inspired architecture}}
+        \resumeItem{Built a \textbf{Singleton} logger with severity filtering and multi-sink output, and a \textbf{Factory} for runtime code generation}
+        \resumeItem{Automated Javadoc and project wiki deployment on every commit via a \textbf{4-job GitHub Actions pipeline}}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
